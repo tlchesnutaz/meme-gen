@@ -109,7 +109,7 @@ export default function Meme() {
         <button onClick={handleSubmit} className="submit">Submit Meme</button>   
       </form>
       <br />
-      <div className="instruction">Enter text, then click, hold and drag text to desired position.</div>
+      <div className="instruction">Enter text, drag text to desired position and hit submit.</div>
       <div className="meme">
         <img src={meme.randomImage} alt="new img" className="meme-image" />
         <Draggable bounds="parent" onStop={(e, data) => handleTopStop(data)}> 
