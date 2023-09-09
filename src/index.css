@@ -23,7 +23,8 @@ main {
     padding: 20px;
 }
 .header-image {
-    height: 120%;
+    max-height: 120%;
+    width: auto;
     margin-right: 6px;
 }
 .header-title {
@@ -32,7 +33,7 @@ main {
 }
 .header-project {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 200;
 }
 
@@ -62,6 +63,7 @@ main {
 }
 .button-image {
     height: 20px;
+    width: auto;
     margin-left: 2px;
 }
 .submit {
@@ -75,7 +77,7 @@ main {
 }
 .instruction {
     margin-bottom: 10px;
-    color: rgb(140, 140, 140);
+    color: rgb(80, 80, 80);
 }
 
 .meme {
@@ -83,6 +85,7 @@ main {
 }
 .meme-image {
     max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 .meme-text {

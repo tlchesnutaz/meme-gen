@@ -5,12 +5,12 @@ import Draggable from "react-draggable"
 
 
 export default function Meme() {
-  // const [memeImg, setMemeImg] = React.useState("http://i.imgflip.com/1bij.jpg")
+  // const [memeImg, setMemeImg] = React.useState("https://i.imgflip.com/1bij.jpg")
   
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: "http://i.imgflip.com/1bij.jpg",
+    randomImage: "https://i.imgflip.com/1bij.jpg",
   })
   const [allMemes, setAllMemes] = useState([]) 
   const [memeList, setMemeList] = useState([])
@@ -21,14 +21,13 @@ export default function Meme() {
       fetch("https://api.imgflip.com/get_memes")
         .then(res => res.json())
         .then(data => {
-          // console.log(data);
+          console.log(data);
           setAllMemes(data.data.memes);
         }) 
   }, [])  
     
   function getMemeImg(event) {
     event.preventDefault()
-    // console.log("Clicked");
     const memesArr = allMemes; 
     const randomNum = Math.floor(Math.random() * memesArr.length); 
     console.log(randomNum);
@@ -76,7 +75,7 @@ export default function Meme() {
     
   let mappedMemes = memeList.map((meme, index) => 
     <div className="meme" key={index}>
-      <img src={meme.randomImage} className="meme-image"/>
+      <img src={meme.randomImage} className="meme-image" />
       <h2 className="meme-text top" style={{transform: `translate(${meme.topTextPos.x}px, ${meme.topTextPos.y}px)` }}>{meme.topText}</h2> 
       <h2 className="meme-text bottom" style={{transform: `translate(${meme.botTextPos.x}px, ${meme.botTextPos.y}px)` }}>{meme.bottomText}</h2> 
     </div>
@@ -104,7 +103,7 @@ export default function Meme() {
           onChange={handleChange}
         />
         <button onClick={getMemeImg} className="form-button">
-          Get a new meme image <img src={image} className="button-image" />
+          Get a new meme image <img src={image} className="button-image" alt="small pic image" />
         </button>
         <button onClick={handleSubmit} className="submit">Submit Meme</button>   
       </form>
