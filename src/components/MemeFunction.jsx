@@ -75,7 +75,7 @@ export default function Meme() {
     
   let mappedMemes = memeList.map((meme, index) => 
     <div className="meme" key={index}>
-      <img src={meme.randomImage} className="meme-image" alt={meme.name}/>
+      <img src={meme.randomImage} className="meme-image" alt={`${meme.name}`}/>
       <h2 className="meme-text top" style={{transform: `translate(${meme.topTextPos.x}px, ${meme.topTextPos.y}px)` }}>{meme.topText}</h2> 
       <h2 className="meme-text bottom" style={{transform: `translate(${meme.botTextPos.x}px, ${meme.botTextPos.y}px)` }}>{meme.bottomText}</h2> 
     </div>
@@ -110,7 +110,7 @@ export default function Meme() {
       <br />
       <div className="instruction">Enter text, drag text to desired position and hit submit.</div>
       <div className="meme">
-        <img src={meme.randomImage} alt={meme.name} className="meme-image" />
+        <img src={meme.randomImage} className="meme-image" alt={`${meme.name}`}/>
         <Draggable bounds="parent" onStop={(e, data) => handleTopStop(data)}> 
               <h2 className="meme-text top">{meme.topText}</h2>
         </Draggable>
