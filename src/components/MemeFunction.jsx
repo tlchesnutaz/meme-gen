@@ -75,7 +75,7 @@ export default function Meme() {
     
   let mappedMemes = memeList.map((meme, index) => 
     <div className="meme" key={index}>
-      <img src={meme.randomImage} className="meme-image" />
+      <img src={meme.randomImage} className="meme-image" alt={meme.name}/>
       <h2 className="meme-text top" style={{transform: `translate(${meme.topTextPos.x}px, ${meme.topTextPos.y}px)` }}>{meme.topText}</h2> 
       <h2 className="meme-text bottom" style={{transform: `translate(${meme.botTextPos.x}px, ${meme.botTextPos.y}px)` }}>{meme.bottomText}</h2> 
     </div>
