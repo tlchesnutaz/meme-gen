@@ -84,7 +84,7 @@ main {
     position: relative;
 }
 .meme-image {
-    max-width: 100%;
+    max-width: 80vh;
     height: auto;
     border-radius: 5px;
 }

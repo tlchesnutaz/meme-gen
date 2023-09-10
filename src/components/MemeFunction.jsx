@@ -110,7 +110,7 @@ export default function Meme() {
       <br />
       <div className="instruction">Enter text, drag text to desired position and hit submit.</div>
       <div className="meme">
-        <img src={meme.randomImage} alt="new img" className="meme-image" />
+        <img src={meme.randomImage} alt={meme.name} className="meme-image" />
         <Draggable bounds="parent" onStop={(e, data) => handleTopStop(data)}> 
               <h2 className="meme-text top">{meme.topText}</h2>
         </Draggable>
